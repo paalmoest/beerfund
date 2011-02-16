@@ -40,7 +40,7 @@ while True:
     pass
     input = raw_input("Welcome to the Beer fund, do something: ")
     if input == "help":
-        print "Type:  \n reg ,to register a user \n load to load \n Or swipe your tag/card to buy a beer "
+        print "Type:  \n reg ,to register a user \n load to load \n Or swipe your tag/card to buy a beer \n loadfund , to put in more beer :)"
     elif input =="reg":
         rfid = raw_input("Swipe your tag: ")
         user = raw_input("Choose a user name: ")
@@ -51,6 +51,9 @@ while True:
             print "really? Me don`t like big shots"
         rfid = raw_input("Swipe your tag !: ")  
         print deposit(rfid,amount)
+    elif input =="loadfund":
+        input = raw_input("How many beers ?: ")
+        print loadFund(input)
     elif input =="lol":
         os.system('chromium-browser http://www.youtube.com/watch?v=dQw4w9WgXcQ')  
     else:
