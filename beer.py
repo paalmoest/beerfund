@@ -32,7 +32,7 @@ def regAccount(rfid,user):
     return "Gratz  with a beerAccount mr. %s " % user
 def loadFund(input):
     fund =  BeerFund.objects.get(pk=1)
-    fund.beercount += input
+    fund.beercount += int(input)
     fund.save()
     return ("You just loaded the beerfund with %s birras!" % input) 
 
