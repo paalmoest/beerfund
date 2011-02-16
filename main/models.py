@@ -5,4 +5,5 @@ class BeerAccount(models.Model):
     credits = models.IntegerField()
     user = models.CharField(max_length=20)
 
-
+class BeerFund(models.Model):
+    beercount = models.IntegerField()
