@@ -13,7 +13,7 @@ def chargeBeer(rfid):
         fund.save()
         account.save()
         time.sleep(1)
-        return "I charged you 1 beer!  You has %s kronerz left" % account.credits
+        return "I charged you 1 beer!  You has %s kronerz left it" % account.credits
     except BeerAccount.DoesNotExist:
         return "NO BEER FOR YOU, not REGISTRED :(, type: reg , in terminal."
 def deposit(rfid,amount):
@@ -37,7 +37,6 @@ def loadFund(input):
     return ("You just loaded the beerfund with %s birras!" % input) 
 
 while True:
-    pass
     input = raw_input("Welcome to the Beer fund, do something: ")
     if input == "help":
         print "Type:  \n reg ,to register a user \n load to load \n Or swipe your tag/card to buy a beer \n loadfund , to put in more beer :)"
@@ -47,8 +46,6 @@ while True:
         print regAccount(rfid,user)
     elif input =="load":
         amount = raw_input("How many $$$ ?: ")
-        if amount > "1000":
-            print "really? Me don`t like big shots"
         rfid = raw_input("Swipe your tag !: ")  
         print deposit(rfid,amount)
     elif input =="loadfund":
